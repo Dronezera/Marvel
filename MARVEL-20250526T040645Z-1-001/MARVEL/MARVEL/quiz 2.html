@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quiz para Promagadores</title>
+    <meta name="description" content="Um quiz para testar seus conhecimentos">
+    <style>
+        .resultado {
+            font-weight: bold;
+            font-size: 20px;
+            color: rgb(14, 110, 14);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Quiz Interativo</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Sobre esse quiz</h2>
+            <p>Ele irá testar seus conhecimentos sobre este infame universo.</p>
+            <p>Bora tentar?</p>
+        </section>
+
+        <form id="quizForm">
+            <!-- Pergunta 1 -->
+            <section>
+                <h2>Pergunta 1: Quem foi o primeiro Vingador?</h2>
+                <input type="radio" name="pergunta1" value="errado"> Homem-Aranha<br>
+                <input type="radio" name="pergunta1" value="certo"> Capitão América<br>
+                <input type="radio" name="pergunta1" value="errado"> Homem de Ferro<br>
+                <input type="radio" name="pergunta1" value="errado"> Soldado Invernal<br>
+            </section>
+
+            <!-- Pergunta 2 -->
+            <section>
+                <h2>Pergunta 2: Quem foi o primeiro herói da Marvel com um filme solo no MCU?</h2>
+                <input type="radio" name="pergunta2" value="certo"> Homem de Ferro<br>
+                <input type="radio" name="pergunta2" value="errado"> Capitão América<br>
+                <input type="radio" name="pergunta2" value="errado"> Homem-Aranha<br>
+                <input type="radio" name="pergunta2" value="errado"> Hulk<br>
+            </section>
+
+            <!-- Pergunta 3 -->
+            <section>
+                <h2>Pergunta 3: Em qual filme Peter Parker aparece pela primeira vez no MCU?</h2>
+                <input type="radio" name="pergunta3" value="errado"> Homem de Ferro 2<br>
+                <input type="radio" name="pergunta3" value="errado"> Vingadores<br>
+                <input type="radio" name="pergunta3" value="certo"> Capitão América: Guerra Civil<br>
+                <input type="radio" name="pergunta3" value="errado"> Homem-Aranha: Longe de Casa<br>
+            </section>
+
+            <!-- Pergunta 4 -->
+            <section>
+                <h2>Pergunta 4: Quem é o pai do Star-Lord?</h2>
+                <input type="radio" name="pergunta4" value="certo"> Ego, o Planeta Vivo<br>
+                <input type="radio" name="pergunta4" value="errado"> Drax<br>
+                <input type="radio" name="pergunta4" value="errado"> Yondu<br>
+                <input type="radio" name="pergunta4" value="errado"> Kraglin<br>
+            </section>
+
+            <!-- Pergunta 5 -->
+            <section>
+                <h2>Pergunta 5: Quem disse a frase “Eu sou inevitável”?</h2>
+                <input type="radio" name="pergunta5" value="errado"> Gamora<br>
+                <input type="radio" name="pergunta5" value="errado"> Ultron<br>
+                <input type="radio" name="pergunta5" value="certo"> Thanos<br>
+                <input type="radio" name="pergunta5" value="errado"> Loki<br>
+            </section>
+
+            <!-- Pergunta 6 -->
+            <section>
+                <h2>Pergunta 6: Quem criou o Visão originalmente nos quadrinhos?</h2>
+                <input type="radio" name="pergunta6" value="errado"> Jarvis<br>
+                <input type="radio" name="pergunta6" value="errado"> Bruce Banner<br>
+                <input type="radio" name="pergunta6" value="errado"> Tony Stark<br>
+                <input type="radio" name="pergunta6" value="certo"> Ultron<br>
+            </section>
+
+            <!-- Pergunta 7 -->
+            <section>
+                <h2>Pergunta 7: Quem além de Thor e Capitão América levantou o Mjolnir no MCU?</h2>
+                <input type="radio" name="pergunta7" value="errado"> Thor<br>
+                <input type="radio" name="pergunta7" value="certo"> Visão<br>
+                <input type="radio" name="pergunta7" value="errado"> Feiticeira Escarlate<br>
+                <input type="radio" name="pergunta7" value="errado"> Viúva Negra<br>
+            </section>
+
+            <!-- Pergunta 8 -->
+            <section>
+                <h2>Pergunta 8: Que evento dividiu os heróis em duas facções?</h2>
+                <input type="radio" name="pergunta8" value="certo"> Guerra Civil<br>
+                <input type="radio" name="pergunta8" value="errado"> Vingadores: Era de Ultron<br>
+                <input type="radio" name="pergunta8" value="errado"> Vingadores<br>
+                <input type="radio" name="pergunta8" value="errado"> Vingadores: Juízo Final<br>
+            </section>
+
+            <!-- Pergunta 9 -->
+            <section>
+                <h2>Pergunta 9: Qual IA substitui J.A.R.V.I.S.?</h2>
+                <input type="radio" name="pergunta9" value="errado"> C-3PO<br>
+                <input type="radio" name="pergunta9" value="certo"> F.R.I.D.A.Y.<br>
+                <input type="radio" name="pergunta9" value="errado"> Hammond<br>
+                <input type="radio" name="pergunta9" value="errado"> Happy<br>
+            </section>
+
+            <!-- Pergunta 10 -->
+            <section>
+                <h2>Pergunta 10: Qual dos vilões foi mais violento com o Homem-Aranha?</h2>
+                <input type="radio" name="pergunta10" value="errado"> Venom<br>
+                <input type="radio" name="pergunta10" value="errado"> Homem-Areia<br>
+                <input type="radio" name="pergunta10" value="certo"> Carnificina<br>
+                <input type="radio" name="pergunta10" value="errado"> Duende Verde<br>
+            </section>
+
+            <br>
+            <button type="button" onclick="verificarRespostas()">Enviar Respostas</button>
+        </form>
+
+        <section>
+            <h2>Pontuação do Nerdola</h2>
+            <p class="resultado" id="resultado"></p>
+            <table border="2">
+                <tr><td>0-4: Não é Nerdola</td></tr>
+                <tr><td>5-6: Nerdola</td></tr>
+                <tr><td>7-10:Mega Nerdola</td></tr>
+            </table>
+        </section>
+    </main>
+
+    <script>
+        function verificarRespostas() {
+            const form = document.forms['quizForm'];
+            let acertos = 0;
+
+            for (let i = 1; i <= 10; i++) {
+                const resposta = form['pergunta' + i].value;
+                if (resposta === "certo") {
+                    acertos++;
+                }
+            }
+
+            let resultadoTexto = `Você acertou ${acertos} de 10 perguntas. `;
+
+            if (acertos <= 4) {
+                resultadoTexto += "Não é Nerdola.";
+            } else if (acertos <= 6) {
+                resultadoTexto += "Você é Nerdola!";
+            } else {
+                resultadoTexto += "Parabéns, você é Mega Nerdola!";
+            }
+
+            document.getElementById("resultado").innerText = resultadoTexto;
+        }
+    </script>
+
+    <footer></footer>
+</body>
+</html>
