@@ -1,0 +1,314 @@
+/* Estilos globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5;
+    color: #23223e;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.photoS1 {
+    background-image: url(sublogo.jpg);
+}
+
+/* Navbar ajustes */
+.navbar .nav-link {
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.navbar .nav-link:hover {
+    color: #0d6efd !important;
+}
+
+/* Seções principais */
+main {
+    padding-top: 56px;
+    /* Ajuste para a navbar fixa do Bootstrap */
+}
+
+main section {
+    padding: 40px 20px;
+}
+
+#s1 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    gap: 30px;
+}
+
+.s1-left,
+.s1-right {
+    flex: 1 1 300px;
+}
+
+.photoS1 {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+}
+
+.s1-right h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.s1-right p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Curiosidades */
+#s2 {
+    background-color: #e9ecef;
+    text-align: center;
+}
+
+#s2 h2 {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+.row-cols-md-3>* {
+    flex-basis: calc(33.33333% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.card {
+    transition: transform 0.3s ease;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* Contato */
+#s3 {
+    background-color: #fdfdfd;
+    text-align: center;
+}
+
+#s3 h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.formulario {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+input,
+button.btn {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button.btn {
+    background-color: #212529;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+    background-color: #343a40;
+}
+
+/* Footer */
+footer {
+    background-color: #212529;
+    padding: 15px 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+footer img {
+    width: 25px;
+    height: 25px;
+    transition: transform 0.3s ease;
+}
+
+footer img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos específicos para a página de Heróis e Vilões */
+main#heroes-page,
+main#villains-page {
+    padding-top: 100px;
+    /* Ajuste para a navbar fixa */
+    background-color: #1a1a1a;
+    color: white;
+    min-height: 100vh;
+}
+
+.container.py-5 h1 {
+    color: #ec1d24;
+    /* Cor vermelha da Marvel para o título */
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.villain-icons-grid,
+.hero-icons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Grid responsivo com tamanho mínimo de 150px por item */
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+    /* Centralizar os itens */
+}
+
+.villain-icon-item,
+.hero-icon-item {
+    background-color: #2a2a2a;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+}
+
+.villain-icon-item:hover,
+.hero-icon-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.villain-icon-item img,
+.hero-icon-item img {
+    width: 80px;
+    /* Tamanho padrão dos ícones */
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    /* Deixando os ícones circulares */
+    margin-bottom: 10px;
+    border: 2px solid #ec1d24;
+    /* Borda vermelha */
+}
+
+.villain-icon-item span,
+.hero-icon-item span {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+/* Media queries para maior responsividade */
+@media (max-width: 768px) {
+    .row-cols-md-3>* {
+        flex-basis: calc(50% - 20px);
+    }
+
+    #s1 {
+        padding: 30px 15px;
+        gap: 20px;
+    }
+
+    .s1-left,
+    .s1-right {
+        flex: 1 1 100%;
+        text-align: center;
+    }
+
+    .photoS1 {
+        max-width: 300px;
+    }
+
+    #s2 h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .row-cols-md-3>* {
+        flex-basis: 100%;
+    }
+
+    .villain-icons-grid,
+    .hero-icons-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .villain-icon-item img,
+    .hero-icon-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .villain-icon-item span,
+    .hero-icon-item span {
+        font-size: 0.8rem;
+    }
+
+    #s3 h2 {
+        font-size: 1.8rem;
+    }
+
+    .formulario {
+        padding: 15px;
+    }
+}
