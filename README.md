@@ -1,2 +1,2 @@
-# Marvel
+# Marvel Wiki
 projeto marvel wiki
